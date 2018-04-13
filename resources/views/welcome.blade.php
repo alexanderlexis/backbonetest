@@ -9,14 +9,14 @@
         <script src="{{URL::asset('/includes/backbone.js')}}"></script>
         <script>
             function proberen(){
-                alert("Hij doet het");
-                $('#iets').hide();
                 var Song =  Backbone.Model.extend({
-                initialize: function() {
-                        console.log("Song gemaakt");
+                initialize: function(henkie) {
+                        console.log("Song gemaakt"+henkie);
                     }
                 });
-                var song = new Song();
+                var song = new Song("tiesto");
+                var song2 = new Song("Harry");
+                var song3 = new Song("Piet");
             }
         </script>
         <style>
