@@ -60,6 +60,25 @@
                        
                     song.off(); 
             }
+            
+            function gebouwAanmaken(){
+                
+                var gebouw = {
+                    naam : "lelijk gebouw",
+                    hoogte : "10 meter",
+                    kleur : "rood"
+                    
+                    
+                };
+                
+                var checkGebouw = Backbone.Model.extend({
+                    validate: function(attrs) {
+                      if (naam !== "mooi gebouw") {
+                        alert('het gebouw is lelijk');
+                      }
+                    }
+                });
+            }
         </script>
         <style>
             html, body {
@@ -92,6 +111,7 @@
             <div class="content">
                 <input type="button" value="start proberen" onclick="proberen()">
                 <input type="button" value="start proberen2" onclick="proberen2()">
+                <input type="button" value="gebouw aanmaken" onclick="gebouwAanmaken()">
                 <div class="title" id="iets">Laravel 5</div>
             </div>
         </div>
