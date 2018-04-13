@@ -10,13 +10,21 @@
         <script>
             function proberen(){
                 var Song =  Backbone.Model.extend({
+                    
                 initialize: function(henkie) {
                         console.log("Song gemaakt"+henkie);
+                    },
+                promptColor: function() {
+                        var cssColor = prompt("Please enter a CSS color:");
+                        this.set({color: cssColor});
+                        console.log(cssColor);
                     }
                 });
                 var song = new Song("tiesto");
                 var song2 = new Song("Harry");
                 var song3 = new Song("Piet");
+                
+                song.promptColor();
             }
         </script>
         <style>
