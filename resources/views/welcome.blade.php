@@ -14,17 +14,19 @@
                 initialize: function(henkie) {
                         console.log("Song gemaakt"+henkie);
                     },
-                promptColor: function() {
+                promptColor: function(kleurtje) {
                         var cssColor = prompt("Please enter a CSS color:");
-                        this.set({color: cssColor});
-                        console.log(cssColor);
+                        this.set({color: kleurtje});
+                        this.color = ();
                     }
                 });
                 var song = new Song("tiesto");
                 var song2 = new Song("Harry");
                 var song3 = new Song("Piet");
+                var song4 = new Song();
                 
-                song.promptColor();
+                song4.promptColor();
+                console.log (song4.promptColor('purple'));
             }
         </script>
         <style>
