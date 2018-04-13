@@ -29,6 +29,32 @@
                 song4.promptColor('purple');
                 console.log(song4);
             }
+            function proberen2(){
+                var Song =  Backbone.Model.extend({
+
+                    initialize: function(henkie) {
+                            console.log("Song gemaakt"+henkie);
+                        },
+                    promptColor: function(kleurtje) {
+    //                        var cssColor = prompt("Please enter a CSS color:");
+                            this.set({color: kleurtje});
+                            alert (this.attributes.color);
+    //                        this.set(color = (kleurtje));
+                        }
+                    });
+                    var song = new Song("tiesto");
+                    var song2 = new Song("Harry");
+                    var song3 = new Song("Piet");
+                    var song4 = new Song('poep');
+
+                    song4.promptColor('purple');
+                    console.log(song4); 
+
+        
+                    song.on({
+                           "change:color": alert('de kleur is veranderd')
+                       });
+            }
         </script>
         <style>
             html, body {
@@ -60,6 +86,7 @@
         <div class="container">
             <div class="content">
                 <input type="button" value="start proberen" onclick="proberen()">
+                <input type="button" value="start proberen2" onclick="proberen2()">
                 <div class="title" id="iets">Laravel 5</div>
             </div>
         </div>
