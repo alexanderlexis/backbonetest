@@ -52,8 +52,13 @@
 
         
                     song.on({
-                           "change:color": alert('de kleur is veranderd')
+                           "change:color": song.promptColor('red'),
+                           "change:color": song.promptColor('blue'),
+                           
+                           
                        });
+                       
+                    song.off(); 
             }
         </script>
         <style>
