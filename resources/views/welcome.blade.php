@@ -15,18 +15,19 @@
                         console.log("Song gemaakt"+henkie);
                     },
                 promptColor: function(kleurtje) {
-                        var cssColor = prompt("Please enter a CSS color:");
+//                        var cssColor = prompt("Please enter a CSS color:");
                         this.set({color: kleurtje});
-                        this.color = ();
+                        alert (this.attributes.color);
+//                        this.set(color = (kleurtje));
                     }
                 });
                 var song = new Song("tiesto");
                 var song2 = new Song("Harry");
                 var song3 = new Song("Piet");
-                var song4 = new Song();
+                var song4 = new Song('poep');
                 
-                song4.promptColor();
-                console.log (song4.promptColor('purple'));
+                song4.promptColor('purple');
+                console.log(song4);
             }
         </script>
         <style>
